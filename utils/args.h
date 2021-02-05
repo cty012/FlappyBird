@@ -1,3 +1,4 @@
+#include <string>
 #include "utils/vector2.h"
 
 #ifndef UTILS_ARGS_H
@@ -5,8 +6,8 @@
 
 struct Args {
     Args();
-    Args(string title);
-    string title;
+    Args(std::string title);
+    std::string title;
     Vector2<int> size;
     Vector2<int> getPos(int alignX, int alignY);
 };

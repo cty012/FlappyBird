@@ -35,6 +35,6 @@ void FrontEnd::render(Sprite component) {
 
 void FrontEnd::quit() {
     printf("FrontEnd: quitting...");
-    *this->window.close();
+    this->window->close();
     this->prepared = false;
 }

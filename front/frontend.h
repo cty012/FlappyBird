@@ -19,7 +19,7 @@ private:
     Args args;
     sf::RenderWindow *window;
     //TODO: EventDetector
-    UI ui;
+    UI *ui;
     bool prepared;
 };
 
