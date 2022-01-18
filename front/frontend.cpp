@@ -1,7 +1,10 @@
 #include <cstdio>
-#include "front/frontend.h"
+#include <SFML/Graphics.hpp>
 
-FrontEnd::FrontEnd(Args args) {
+#include "front/frontend.hpp"
+#include "front/ui.hpp"
+
+FrontEnd::FrontEnd(Args *args) {
     this->args = args;
     this->prepared = false;
 }
@@ -14,23 +17,23 @@ FrontEnd::~FrontEnd() {
 
 void FrontEnd::prepare() {
     //TODO: prepare (EventDetector, UI, icon)
-    this->window = new sf::RenderWindow(sf::VideoMode(1280, 720), this->args.title);
+    this->window = new sf::RenderWindow(sf::VideoMode(1280, 720), this->args->title);
     this->ui = new UI(args, this->window);
     printf("FrontEnd: preparing...");
     this->prepared = true;
 }
 
-Events FrontEnd::getEvents() {
-    //TODO: get Events
+Events* FrontEnd::getEvents() {
     printf("FrontEnd: getting events...");
-    return Events();
+    //TODO: get Events
+    return new Events();
 }
 
-void FrontEnd::render(Sprite component) {
+void FrontEnd::render(Sprite *component) {
     printf("FrontEnd: rendering...");
-    this->ui.clear();
-    component.show(this->ui);
-    this->ui.update();
+    this->ui->clear();
+    component->show(this->ui);
+    this->ui->update();
 }
 
 void FrontEnd::quit() {

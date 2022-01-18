@@ -1,5 +1,5 @@
 #include <string>
-#include "utils/vector2.h"
+#include "utils/vector2.hpp"
 
 #ifndef UTILS_ARGS_H
 #define UTILS_ARGS_H

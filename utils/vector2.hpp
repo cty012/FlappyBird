@@ -2,7 +2,6 @@
 #define UTILS_VECTOR2_H
 
 template<class T>
-
 struct Vector2 {
     T x, y;
     Vector2();

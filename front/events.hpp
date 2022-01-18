@@ -1,11 +1,11 @@
 #include <list>
-#include "utils/vector2.h"
+#include "utils/vector2.hpp"
 
 #ifndef FRONT_EVENT_H
 #define FRONT_EVENT_H
 
-enum MouseBtn { HOVER, CLICK };
-enum MouseWheel { HOVER, CLICK, SCROLL_UP, SCROLL_DOWN };
+enum class MouseBtn { HOVER, CLICK };
+enum class MouseWheel { HOVER, CLICK, SCROLL_UP, SCROLL_DOWN };
 
 struct Events {
     bool quit = false;

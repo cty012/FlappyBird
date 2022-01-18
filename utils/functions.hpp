@@ -1,4 +1,4 @@
-#include "utils/vector2.h"
+#include "utils/vector2.hpp"
 
 #ifndef UTILS_FUNCTIONS_H
 #define UTILS_FUNCTIONS_H

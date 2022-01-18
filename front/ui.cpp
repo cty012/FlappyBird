@@ -1,17 +1,16 @@
-#include "front/ui.h"
+#include "front/ui.hpp"
 
-UI::UI(Args args, sf::RenderWindow window) {
+UI::UI(Args *args, sf::RenderWindow *window) {
     this->args = args;
     this->window = window;
-    this->size = this->window.getSize();
 }
 
 void UI::clear() {
-    this->window.clear(sf::Color::White);
+    this->window->clear(sf::Color::White);
 }
 
-void UI::display() {
-    this->window.display();
+void UI::update() {
+    this->window->display();
 }
 
 // TODO: lots of show methods
